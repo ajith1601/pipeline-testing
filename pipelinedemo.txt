@@ -1,23 +1,20 @@
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
-    }
     stages {
         stage('Building') {
             steps {
-                sh 'make'
+                sh 'echo this is first job'
             }
         }
         stage('Testing'){
             steps {
-                sh 'make check'
-                junit 'reports/**/*.xml'
+                sh 'python3'
+             
             }
         }
         stage('Deploying') {
             steps {
-                sh 'make publish'
+                sh 'echo this last job'
             }
         }
     }
