@@ -4,18 +4,18 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
-        stage('Build') {
+        stage('Building') {
             steps {
                 sh 'make'
             }
         }
-        stage('Test'){
+        stage('Testing'){
             steps {
                 sh 'make check'
                 junit 'reports/**/*.xml'
             }
         }
-        stage('Deploy') {
+        stage('Deploying') {
             steps {
                 sh 'make publish'
             }
