@@ -4,6 +4,7 @@ pipeline {
         stage('testing-Building') {
             steps {
                 sh 'echo this is first job'
+sh 'echo this second job'
             }
         }
         stage('Testing'){
