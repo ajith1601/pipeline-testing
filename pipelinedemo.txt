@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'echo this is first job'
 sh 'echo this second job'
+sh 'echo this third job'
             }
         }
         stage('Testing'){
