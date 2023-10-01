@@ -4,7 +4,7 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
-        stage('1st Build') {
+        stage('3rd time Build') {
             steps {
                 sh 'echo this is 1st job'
 sh 'echo this is 2st job'
