@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {
+        stage('1st Build') {
+            steps {
+                sh 'echo this is 1st job'
+            }
+        }
+        stage('2nd Test'){
+            steps {
+                sh 'make check'
+              
+            }
+        }
+        stage('3rd Deploy') {
+            steps {
+               sh 'echo this is 1st jodeploy'
+            }
+        }
+    }
+}
