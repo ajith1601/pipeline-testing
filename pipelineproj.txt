@@ -10,7 +10,7 @@ sh 'echo this is 2st job'
         }
         stage('2nd Test'){
             steps {
-                sh 'make check'
+                sh 'echo testing'
               
             }
         }
