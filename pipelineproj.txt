@@ -1,10 +1,8 @@
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
-    }
+   
     stages {
-        stage('3rd time Build') {
+        stage('4th time Build') {
             steps {
                 sh 'echo this is 1st job'
 sh 'echo this is 2st job'
