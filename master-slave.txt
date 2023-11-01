@@ -1,0 +1,94 @@
+ 1  pwd
+    2  cd /opt/
+    3  mkdir jenkins
+    4  chmod 755 jenkins
+    5  cd jenkins/
+    6  pwd
+    7  ssh-keygen
+    8  cd ~/.ssh/
+    9  ll
+   10  cat id-rsa
+   11  cat id_rsa
+   12  hostname -i
+   13  pwd
+   14  ll
+   15  cat id_rsa.pub
+   16  vim authorized_keys
+   17  ps -ef | grep -i jenkins
+   18  history
+
+*authentication successfully :
+SSHLauncher{host='172.31.8.187', port=22, credentialsId='slavenodeserver', jvmOptions='', javaPath='', prefixStartSlaveCmd='', suffixStartSlaveCmd='', launchTimeoutSeconds=60, maxNumRetries=10, retryWaitTime=15, sshHostKeyVerificationStrategy=hudson.plugins.sshslaves.verifiers.NonVerifyingKeyVerificationStrategy, tcpNoDelay=true, trackCredentials=true}
+[10/08/23 07:00:12] [SSH] Opening SSH connection to 172.31.8.187:22.
+[10/08/23 07:00:12] [SSH] WARNING: SSH Host Keys are not being verified. Man-in-the-middle attacks may be possible against this connection.
+[10/08/23 07:00:12] [SSH] Authentication successful.
+[10/08/23 07:00:13] [SSH] The remote user's environment is:
+BASH=/usr/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:extquote:force_fignore:globasciiranges:hostcomplete:interactive_comments:progcomp:promptvars:sourcepath
+BASH_ALIASES=()
+BASH_ARGC=([0]="0")
+BASH_ARGV=()
+BASH_CMDS=()
+BASH_EXECUTION_STRING=set
+BASH_LINENO=()
+BASH_SOURCE=()
+BASH_VERSINFO=([0]="5" [1]="1" [2]="16" [3]="1" [4]="release" [5]="x86_64-pc-linux-gnu")
+BASH_VERSION='5.1.16(1)-release'
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/0/bus
+DIRSTACK=()
+EUID=0
+GROUPS=()
+HOME=/root
+HOSTNAME=jenkinsmaster
+HOSTTYPE=x86_64
+IFS=$' \t\n'
+LANG=C.UTF-8
+LOGNAME=root
+MACHTYPE=x86_64-pc-linux-gnu
+MOTD_SHOWN=pam
+OPTERR=1
+OPTIND=1
+OSTYPE=linux-gnu
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PIPESTATUS=([0]="0")
+PPID=37026
+PS4='+ '
+PWD=/root
+SHELL=/bin/bash
+SHELLOPTS=braceexpand:hashall:interactive-comments
+SHLVL=1
+SSH_CLIENT='172.31.8.187 34274 22'
+SSH_CONNECTION='172.31.8.187 34274 172.31.8.187 22'
+TERM=dumb
+UID=0
+USER=root
+XDG_RUNTIME_DIR=/run/user/0
+XDG_SESSION_CLASS=user
+XDG_SESSION_ID=7
+XDG_SESSION_TYPE=tty
+_=']'
+Checking Java version in the PATH
+openjdk version "17.0.8.1" 2023-08-24
+OpenJDK Runtime Environment (build 17.0.8.1+1-Ubuntu-0ubuntu122.04)
+OpenJDK 64-Bit Server VM (build 17.0.8.1+1-Ubuntu-0ubuntu122.04, mixed mode, sharing)
+[10/08/23 07:00:14] [SSH] Checking java version of /opt/jenkins/jdk/bin/java
+Couldn't figure out the Java version of /opt/jenkins/jdk/bin/java
+bash: line 1: /opt/jenkins/jdk/bin/java: No such file or directory
+
+[10/08/23 07:00:14] [SSH] Checking java version of java
+[10/08/23 07:00:14] [SSH] java -version returned 17.0.8.1.
+[10/08/23 07:00:14] [SSH] Starting sftp client.
+[10/08/23 07:00:14] [SSH] Copying latest remoting.jar...
+[10/08/23 07:00:14] [SSH] Copied 1,371,441 bytes.
+Expanded the channel window size to 4MB
+[10/08/23 07:00:14] [SSH] Starting agent process: cd "/opt/jenkins" && java  -jar remoting.jar -workDir /opt/jenkins -jar-cache /opt/jenkins/remoting/jarCache
+Oct 08, 2023 7:00:14 AM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using /opt/jenkins/remoting as a remoting work directory
+Oct 08, 2023 7:00:14 AM org.jenkinsci.remoting.engine.WorkDirManager setupLogging
+INFO: Both error and output logs will be printed to /opt/jenkins/remoting
+<===[JENKINS REMOTING CAPACITY]===>channel started
+Remoting version: 3148.v532a_7e715ee3
+Launcher: SSHLauncher
+Communication Protocol: Standard in/out
+This is a Unix agent
+Agent successfully connected and online
