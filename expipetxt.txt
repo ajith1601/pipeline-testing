@@ -14,7 +14,12 @@ pipeline {
              
             }
         }
-        stage('Deploy') {
+        stage('compile') {
+            steps {
+                sh 'echo compile'
+            }
+        }
+stage('Deploy') {
             steps {
                 sh 'echo pipeline complete'
             }
