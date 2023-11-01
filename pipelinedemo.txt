@@ -1,20 +1,20 @@
 pipeline {
     agent any
     stages {
-        stage('Building ') {
+        stage('Build ') {
             steps {
                 sh 'echo this is first job'
 sh 'echo this second job'
 sh 'echo this third job'
             }
         }
-        stage('Testing'){
+        stage('Test'){
             steps {
                 sh 'python3'
              
             }
         }
-        stage('Deploying') {
+        stage('Deploy) {
             steps {
                 sh 'echo this last job'
             }
