@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Building') {
+        stage('Build 1st job') {
             steps {
                 sh 'echo this is first job'
                sh 'echo this second job'
