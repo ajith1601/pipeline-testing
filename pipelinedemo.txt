@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Build ') {
+        stage('Building') {
             steps {
                 sh 'echo this is first job'
-sh 'echo this second job'
-sh 'echo this third job'
+               sh 'echo this second job'
+
             }
         }
         stage('Test'){
@@ -16,7 +16,7 @@ sh 'echo this third job'
         }
         stage('Deploy) {
             steps {
-                sh 'echo this last job'
+                sh 'echo pipeline complete'
             }
         }
     }
