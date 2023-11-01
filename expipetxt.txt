@@ -1,28 +1,49 @@
 pipeline {
     agent any
     stages {
-        stage('Build 1st job') {
+        stage('git cheeckout') {
             steps {
                 sh 'echo this is first job'
                sh 'echo this second job'
 
             }
         }
-        stage('Test'){
+        stage('compile'){
             steps {
                 sh 'python3'
              
             }
         }
-        stage('compile') {
+        stage('analysis') {
             steps {
                 sh 'echo compile'
             }
         }
-stage('Deploy') {
+stage('Build') {
             steps {
                 sh 'echo pipeline complete'
             }
         }
+stage('Dependency check') {
+            steps {
+                sh 'echo pipeline complete'
+            }
+        }
+stage('Build docker image') {
+            steps {
+                sh 'echo pipeline complete'
+            }
+        }
+stage('Push docker image') {
+            steps {
+                sh 'echo pipeline complete'
+            }
+}
+stage('Run docker image') {
+            steps {
+                sh 'echo pipeline complete'
+            }
+        }        
+
     }
 }
